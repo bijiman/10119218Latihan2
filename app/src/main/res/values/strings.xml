@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">10119218Latihan2</string>
+    <string name="usernamehint">Username</string>
+    <string name="passwordhint">Password</string>
+    <string name="phonehint">Phone Number</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="connect">CONNECT TO FACEBOOK</string>
+    <string name="noacc">Doesn\'t Have an Account ?</string>
+    <string name="register">Register</string>
+    <string name="emailhint">Email</string>
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="retypepass">Retype Password</string>
+    <string name="personal">Personal</string>
+    <string name="org">Organization</string>
+    <string name="homeadd">Home Address</string>
+    <string name="location">Default Location</string>
+    <string name="tnc">Agree with Term and Condition</string>
+    <string name="almost">Almost There</string>
+    <string name="thanks">Thank you for registering with us. One more step, you need to check your Email to activate your account.</string>
+    <string name="verify">VERIFY</string>
+    <string name="verifyacc">Verify your Account</string>
+    <string name="code">We have sent a verification code to your Email.</string>
+    <string name="enter">Enter your Verification Code Here</string>
+    <string name="send">SEND</string>
+    <string name="nocode">Doesn\'t get the Code?</string>
+    <string name="resend">Resend.</string>
+    <string name="nama">Joyson Sitorus</string>
+    <string name="bloodtype">Blood Type : O</string>
+    <string name="givenum">75</string>
+    <string name="bloodgiven">Blood Given</string>
+    <string name="receivednum">100</string>
+    <string name="received">Blood Received</string>
+    <string name="thanks1num">330</string>
+    <string name="thanks1">Thanks</string>
+    <string name="search">Search Donor</string>
+    <string name="descsearch">Search donor near you</string>
+    <string name="bneeded">Blood Needed</string>
+    <string name="descbneeded">4 User need your blood</string>
+    <string name="msg">Message</string>
+    <string name="descmsg">5 New messages</string>
+    <string name="donorhistory">Donor History</string>
+    <string name="descdonorhistory">5 Given, 2 Received</string>
+
+
+</resources>

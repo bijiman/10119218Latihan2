@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blubackground"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/ic_welcome_logo"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="@string/usernamehint"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView4" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="@string/passwordhint"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        />
+
+    <com.google.android.material.button.MaterialButton style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/buttonlogin"
+        app:strokeColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/password"/>
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/or"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonlogin"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.button.MaterialButton style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/buttonconnect"
+        app:strokeColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/or"
+        app:icon="@drawable/ic_welcome_fb_login"
+        app:iconTint="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonconnect"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/noacc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noacc"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/regis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/noacc"
+            android:layout_marginLeft="3dp"
+            />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

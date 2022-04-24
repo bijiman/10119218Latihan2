@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:id="@+id/menulayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headermenu"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_header_profile"
+        app:layout_constraintTop_toTopOf="@id/menulayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_side_menu"
+            app:layout_constraintLeft_toLeftOf="@id/headermenu"
+            app:layout_constraintRight_toRightOf="@id/headermenu"
+            app:layout_constraintTop_toTopOf="@id/headermenu"
+            app:layout_constraintBottom_toBottomOf="@id/headermenu"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.03"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notification"
+            app:layout_constraintLeft_toLeftOf="@id/headermenu"
+            app:layout_constraintRight_toRightOf="@id/headermenu"
+            app:layout_constraintTop_toTopOf="@id/headermenu"
+            app:layout_constraintBottom_toBottomOf="@id/headermenu"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.97"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/whatsapp_image_2022_04_12_at_3_39_11_pm"
+        app:border_width="4dp"
+        app:border_color="@color/white"
+        android:layout_marginTop="72.5dp"
+        app:layout_constraintLeft_toLeftOf="@id/headermenu"
+        app:layout_constraintRight_toRightOf="@id/headermenu"
+        app:layout_constraintTop_toTopOf="@id/headermenu"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutseluruh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        android:padding="15dp">
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama"
+            android:textColor="@color/blubackground"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@id/layoutseluruh" />
+
+        <TextView
+            android:id="@+id/typeblood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bloodtype"
+            app:layout_constraintTop_toBottomOf="@id/nama"
+            android:textAlignment="center"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/typeblood"
+            android:layout_marginTop="10dp"
+            android:id="@+id/numui">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="1"
+                android:columnCount="3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/givenblood">
+                    <TextView
+                        android:id="@+id/numgiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/givenum"
+                        android:textColor="@color/blubackground"
+                        android:textSize="30dp"
+                        app:layout_constraintTop_toTopOf="@id/givenblood"
+                        app:layout_constraintLeft_toLeftOf="@id/givenblood"
+                        app:layout_constraintRight_toRightOf="@id/givenblood"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bloodgiven"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/numgiv"
+                        app:layout_constraintLeft_toLeftOf="@id/givenblood"
+                        app:layout_constraintRight_toRightOf="@id/givenblood"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/receivedblood">
+                    <TextView
+                        android:id="@+id/numrec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/receivednum"
+                        android:textColor="@color/blubackground"
+                        android:textSize="30dp"
+                        app:layout_constraintTop_toTopOf="@id/receivedblood"
+                        app:layout_constraintLeft_toLeftOf="@id/receivedblood"
+                        app:layout_constraintRight_toRightOf="@id/receivedblood"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/received"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/numrec"
+                        app:layout_constraintLeft_toLeftOf="@id/receivedblood"
+                        app:layout_constraintRight_toRightOf="@id/receivedblood"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/thanks1">
+                    <TextView
+                        android:id="@+id/thanks1num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thanks1num"
+                        android:textColor="@color/blubackground"
+                        android:textSize="30dp"
+                        app:layout_constraintTop_toTopOf="@id/thanks1"
+                        app:layout_constraintLeft_toLeftOf="@id/thanks1"
+                        app:layout_constraintRight_toRightOf="@id/thanks1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thanks1"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/thanks1num"
+                        app:layout_constraintLeft_toLeftOf="@id/thanks1"
+                        app:layout_constraintRight_toRightOf="@id/thanks1"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/numui"
+            android:layout_marginTop="25dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="2"
+                android:columnCount="2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/searchdonor">
+                    <ImageView
+                        android:id="@+id/gambardonor"
+                        android:src="@drawable/ic_search_donor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/searchdonor"
+                        app:layout_constraintLeft_toLeftOf="@id/searchdonor"
+                        app:layout_constraintRight_toRightOf="@id/searchdonor"/>
+
+                    <TextView
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/gambardonor"
+                        app:layout_constraintLeft_toLeftOf="@id/searchdonor"
+                        app:layout_constraintRight_toRightOf="@id/searchdonor"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descsearch"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/search"
+                        app:layout_constraintLeft_toLeftOf="@id/searchdonor"
+                        app:layout_constraintRight_toRightOf="@id/searchdonor"
+                        android:textSize="12dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/bloodneeded">
+                    <ImageView
+                        android:id="@+id/gambarneeded"
+                        android:src="@drawable/ic_blood_needed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/bloodneeded"
+                        app:layout_constraintLeft_toLeftOf="@id/bloodneeded"
+                        app:layout_constraintRight_toRightOf="@id/bloodneeded"/>
+
+                    <TextView
+                        android:id="@+id/bneeded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bneeded"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/gambarneeded"
+                        app:layout_constraintLeft_toLeftOf="@id/bloodneeded"
+                        app:layout_constraintRight_toRightOf="@id/bloodneeded"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descsearch"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/bneeded"
+                        app:layout_constraintLeft_toLeftOf="@id/bloodneeded"
+                        app:layout_constraintRight_toRightOf="@id/bloodneeded"
+                        android:textSize="12dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/message"
+                    android:layout_marginTop="25dp">
+                    <ImageView
+                        android:id="@+id/gambarmessage"
+                        android:src="@drawable/ic_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/message"
+                        app:layout_constraintLeft_toLeftOf="@id/message"
+                        app:layout_constraintRight_toRightOf="@id/message"/>
+
+                    <TextView
+                        android:id="@+id/message1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/msg"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/gambarmessage"
+                        app:layout_constraintLeft_toLeftOf="@id/message"
+                        app:layout_constraintRight_toRightOf="@id/message"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descmsg"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/message1"
+                        app:layout_constraintLeft_toLeftOf="@id/message"
+                        app:layout_constraintRight_toRightOf="@id/message"
+                        android:textSize="12dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/dhistory"
+                    android:layout_marginTop="25dp">
+                    <ImageView
+                        android:id="@+id/gambardhistory"
+                        android:src="@drawable/ic_donor_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/dhistory"
+                        app:layout_constraintLeft_toLeftOf="@id/dhistory"
+                        app:layout_constraintRight_toRightOf="@id/dhistory"/>
+
+                    <TextView
+                        android:id="@+id/history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/msg"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/gambardhistory"
+                        app:layout_constraintLeft_toLeftOf="@id/dhistory"
+                        app:layout_constraintRight_toRightOf="@id/dhistory"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descdonorhistory"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toBottomOf="@id/history"
+                        app:layout_constraintLeft_toLeftOf="@id/dhistory"
+                        app:layout_constraintRight_toRightOf="@id/dhistory"
+                        android:textSize="12dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

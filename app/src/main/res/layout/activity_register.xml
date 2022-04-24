@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_header_back"
+            app:layout_constraintTop_toTopOf="@+id/header"
+            app:layout_constraintBottom_toBottomOf="@+id/header"
+            app:layout_constraintLeft_toLeftOf="@+id/header"
+            app:layout_constraintRight_toRightOf="@+id/header"
+            app:layout_constraintHorizontal_bias="0.050"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/header"
+            app:layout_constraintBottom_toBottomOf="@+id/header"
+            app:layout_constraintLeft_toLeftOf="@+id/header"
+            app:layout_constraintRight_toRightOf="@+id/header"
+            app:layout_constraintHorizontal_bias="0.150"
+            android:textColor="@color/white"
+            android:text="@string/register"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/najib"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/userregis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/usernamehint"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintBottom_toTopOf="@id/emailregis"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/emailregis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/emailhint"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintTop_toBottomOf="@id/userregis"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/phoneregis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/phonehint"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintTop_toBottomOf="@id/emailregis"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/phoneregis"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/malebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:textColor="@color/fontdesc"/>
+
+            <RadioButton
+                android:id="@+id/femalebutton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/female"
+                android:textColor="@color/fontdesc"
+                android:layout_marginStart="70dp"
+                />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/spinnergroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/radiogroup"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/type"
+                app:layout_constraintTop_toBottomOf="@id/radiogroup"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:entries="@array/rhesus"
+                app:layout_constraintTop_toBottomOf="@id/radiogroup"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/passwordhint"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintTop_toBottomOf="@id/spinnergroup"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/retypepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/retypepass"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/retypepass"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/personalbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal"
+                android:textColor="@color/fontdesc"/>
+
+            <RadioButton
+                android:id="@+id/orgbutton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/org"
+                android:textColor="@color/fontdesc"
+                android:layout_marginStart="70dp"
+                />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/job"
+            app:layout_constraintTop_toBottomOf="@id/radiogroup1"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/homeadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/homeadd"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintTop_toBottomOf="@id/job"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/greyseparator"
+            android:hint="@string/location"
+            android:textColorHint="@color/fontdesc"
+            app:layout_constraintTop_toBottomOf="@id/homeadd"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <CheckBox
+            android:id="@+id/checkbruh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            android:layout_marginTop="10dp"
+            android:text="@string/tnc"
+            android:textColor="@color/fontdesc"/>
+
+        <com.google.android.material.button.MaterialButton style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/buttonregister"
+            app:strokeColor="@color/blubackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textColor="@color/blubackground"
+            app:layout_constraintTop_toBottomOf="@+id/checkbruh"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
