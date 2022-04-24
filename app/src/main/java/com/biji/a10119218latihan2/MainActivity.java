@@ -6,6 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+
+/*
+Joyson Sitorus
+10119218
+IF6
+ */
+ */
+ */
+*/
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
