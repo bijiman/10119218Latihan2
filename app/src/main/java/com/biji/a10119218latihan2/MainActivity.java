@@ -8,14 +8,13 @@ import android.widget.TextView;
 
 
 /*
-Joyson Sitorus
+24 April 2022
+Latihan 2
 10119218
+Joyson Sitorus
 IF6
  */
- */
- */
-*/
- */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -9,6 +9,14 @@ import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 
+/*
+24 April 2022
+Latihan 2
+10119218
+Joyson Sitorus
+IF6
+ */
+
 public class RegisterActivity extends AppCompatActivity {
 
     @Override

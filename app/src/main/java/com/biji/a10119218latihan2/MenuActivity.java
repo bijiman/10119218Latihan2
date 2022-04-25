@@ -4,6 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+/*
+24 April 2022
+Latihan 2
+10119218
+Joyson Sitorus
+IF6
+ */
+
 public class MenuActivity extends AppCompatActivity {
 
     @Override
